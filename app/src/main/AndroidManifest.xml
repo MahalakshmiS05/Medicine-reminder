@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Needed to show notifications on Android 13 (API 33) and above -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Needed so the reminder fires at the exact time you set -->
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicineReminder">
+
+        <!-- Screen 1: the screen where the user enters medicine info -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Screen 2: opens when the notification is tapped -->
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Wakes up when the alarm time arrives and shows the notification -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="false" />
+
+    </application>
+</manifest>

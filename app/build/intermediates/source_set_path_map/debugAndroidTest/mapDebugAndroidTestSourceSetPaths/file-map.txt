@@ -1,0 +1,4 @@
+com.example.medicinereminder.test.app-androidTest-0 D:\de\MedicineReminder\MedicineReminder\app\build\generated\res\resValues\androidTest\debug
+com.example.medicinereminder.test.app-mergeDebugAndroidTestResources-1 D:\de\MedicineReminder\MedicineReminder\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.medicinereminder.test.app-mergeDebugAndroidTestResources-2 D:\de\MedicineReminder\MedicineReminder\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.medicinereminder.test.app-debugAndroidTest-3 D:\de\MedicineReminder\MedicineReminder\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
